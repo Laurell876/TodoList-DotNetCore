@@ -12,12 +12,21 @@
     margin: 20px 0;
 }
 
-#delete_todo_icon{
-    cursor:pointer;
+#single_todo a{
+    color: black;
 }
 
 
 #add_todo_button_section {
     display: flex;
     justify-content: center;
+}
+
+
+
+.delete_button {
+    background: none;
+    padding: 0px;
+    border: none;
+    background-color:red;
 }
