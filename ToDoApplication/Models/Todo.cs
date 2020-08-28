@@ -12,6 +12,6 @@ namespace ToDoApplication.Models
         public int Id { get; set; }
 
         [Required]
-        public string content { get; set; }
+        public string Content { get; set; }
     }
 }

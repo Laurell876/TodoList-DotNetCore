@@ -20,10 +20,26 @@ namespace ToDoApplication.Controllers
             _db = db;
         }
 
-        // Get Todos
         public async Task<IActionResult> Index()
         {
             return View(await _db.Todos.ToListAsync());
+        }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateTodo(Todo todo)
+        {
+            if (ModelState.IsValid)
+            {
+                await _db.Todos.AddAsync(todo);
+                await _db.SaveChangesAsync();
+            }
+            return RedirectToAction("Index");
         }
 
         // Delete Todo

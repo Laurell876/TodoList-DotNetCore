@@ -8,7 +8,7 @@
     @foreach (var item in Model)
     {
         <div id="single_todo">
-            <p class="m-0 p-0" id="todo_content">@Html.DisplayFor(modelItem => item.content)</p>
+            <p class="m-0 p-0" id="todo_content">@Html.DisplayFor(modelItem => item.Content)</p>
             <form  asp-action="Delete" 
                asp-controller="Todos"
                asp-route-todoId="@item.Id"
@@ -25,6 +25,18 @@
 
     }
     <div id="add_todo_button_section">
-        <button type="button" class="btn btn-primary">Add Todo</button>
+        <form asp-area=""
+              id="add_button"
+              class="text-white"
+              asp-controller="Todos"
+              asp-action="Create">
+
+            <button type="submit" class="btn btn-primary">
+
+                Add Todo
+
+            </button>
+        </form>
+
     </div>
 </div>

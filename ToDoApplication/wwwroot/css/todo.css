@@ -30,3 +30,26 @@
     border: none;
     background-color:red;
 }
+
+#add_button {
+    text-decoration:none;
+
+}
+
+
+#single_todo_section{
+    margin:auto;
+    width:400px;
+    display:flex;
+    justify-content:space-between;
+}
+
+.todo_input{
+    width:200px;
+}
+
+
+.validation_message, .button_area {
+    display: flex;
+    justify-content: center;
+}

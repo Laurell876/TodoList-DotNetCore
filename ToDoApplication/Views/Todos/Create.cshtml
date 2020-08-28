@@ -1,0 +1,34 @@
+﻿@model ToDoApplication.Models.Todo
+
+
+
+<div class="text-danger" asp-validation-summary="ModelOnly"></div>
+<h1 class="text-center">Create Todo</h1>
+<br />
+
+
+
+<form asp-action="CreateTodo">
+    <div class="form-group" id="single_todo_section">
+        <label asp-for="Content" class="control-label"></label>
+        <input asp-for="Content" class="form-control todo_input" />
+    </div>
+    <br />
+    <div class="validation_message">
+        <span asp-validation-for="Content" class="text-danger"></span>
+    </div>
+
+
+
+
+    <br />
+    <div class="form-group button_area">
+
+        <button type="submit" class="btn btn-primary">
+            Add Todo
+        </button>
+    </div>
+</form>
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
