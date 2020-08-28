@@ -1,0 +1,23 @@
+﻿
+
+#all_todos{
+    width:300px;
+    margin:auto;
+}
+
+#single_todo{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    margin: 20px 0;
+}
+
+#delete_todo_icon{
+    cursor:pointer;
+}
+
+
+#add_todo_button_section {
+    display: flex;
+    justify-content: center;
+}
